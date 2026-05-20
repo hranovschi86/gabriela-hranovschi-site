@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150">
+  <title>Gabriela Hranovschi — logo stacked</title>
+  <desc>Compact stacked lockup — symbol left, name on two lines. Use for Instagram bio, narrow web columns, LinkedIn header.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&amp;display=swap');
+      .gh-line { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 40px; fill: #3D2E2A; letter-spacing: 0.005em; }
+      .gh-line-it { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; font-size: 40px; fill: #3D2E2A; letter-spacing: 0.005em; }
+    </style>
+  </defs>
+
+  <!-- Symbol -->
+  <g transform="translate(18,22)">
+    <path d="M 12 70 Q 53 116 94 70"
+          fill="none"
+          stroke="#3D2E2A"
+          stroke-width="6"
+          stroke-linecap="round"/>
+    <circle cx="53" cy="42" r="12" fill="#C4634A"/>
+  </g>
+
+  <!-- Wordmark, two lines -->
+  <text x="142" y="68" class="gh-line">gabriela</text>
+  <text x="142" y="116" class="gh-line-it">hranovschi</text>
+</svg>

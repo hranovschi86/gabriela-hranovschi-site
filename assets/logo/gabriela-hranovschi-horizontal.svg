@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <title>Gabriela Hranovschi — logo orizontal</title>
+  <desc>Primary horizontal lockup. Use for site headers, email signatures, presentation footers.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&amp;family=Nunito+Sans:wght@300&amp;display=swap');
+      .gh-name { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 40px; fill: #3D2E2A; letter-spacing: 0.005em; }
+      .gh-tag  { font-family: 'Nunito Sans', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 11px; fill: #6B5852; letter-spacing: 0.32em; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <!-- Symbol -->
+  <g transform="translate(20,18)">
+    <path d="M 8 56 Q 42 94 76 56"
+          fill="none"
+          stroke="#3D2E2A"
+          stroke-width="5"
+          stroke-linecap="round"/>
+    <circle cx="42" cy="34" r="9.5" fill="#C4634A"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="130" y="65" class="gh-name">gabriela hranovschi</text>
+  <text x="132" y="88" class="gh-tag">specialist în dezvoltarea copilului</text>
+</svg>

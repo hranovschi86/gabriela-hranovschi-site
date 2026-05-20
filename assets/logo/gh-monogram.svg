@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <title>Gabriela Hranovschi — monogram</title>
+  <desc>Symbol with gh initials. For social avatars, contained icons, badge use.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&amp;display=swap');
+      .gh-mark { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 34px; fill: #3D2E2A; letter-spacing: 0.12em; }
+    </style>
+  </defs>
+  <!-- Soft cream backing circle for avatar contexts -->
+  <circle cx="120" cy="120" r="120" fill="#F4EBDD"/>
+  <!-- Embrace arc (presence) -->
+  <path d="M 58 134 Q 120 200 182 134"
+        fill="none"
+        stroke="#3D2E2A"
+        stroke-width="7"
+        stroke-linecap="round"/>
+  <!-- Seed (the child held) -->
+  <circle cx="120" cy="98" r="18" fill="#C4634A"/>
+  <!-- Initials -->
+  <text x="120" y="226" text-anchor="middle" class="gh-mark">gh</text>
+</svg>

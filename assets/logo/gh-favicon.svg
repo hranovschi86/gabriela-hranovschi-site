@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>Gabriela Hranovschi — favicon</title>
+  <desc>Symbol: nest embrace holding a seed above — presence and growth.</desc>
+  <path d="M 5 18 Q 16 31 27 18"
+        fill="none"
+        stroke="#3D2E2A"
+        stroke-width="2.6"
+        stroke-linecap="round"/>
+  <circle cx="16" cy="12" r="3.6" fill="#C4634A"/>
+</svg>
