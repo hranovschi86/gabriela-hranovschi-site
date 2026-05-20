@@ -70,7 +70,7 @@ function initHeaderBehavior() {
       nav.setAttribute('data-open', 'false');
       toggle.setAttribute('aria-expanded', 'false');
       toggle.setAttribute('aria-label', 'Deschide meniul');
-      document.body.style.overflow = '';
+      document.body.classList.remove('nav-open');
     };
 
     toggle.addEventListener('click', () => {
@@ -78,7 +78,7 @@ function initHeaderBehavior() {
       nav.setAttribute('data-open', String(!open));
       toggle.setAttribute('aria-expanded', String(!open));
       toggle.setAttribute('aria-label', open ? 'Deschide meniul' : 'Închide meniul');
-      document.body.style.overflow = open ? '' : 'hidden';
+      document.body.classList.toggle('nav-open', !open);
     });
 
     // Închide meniul când se face click pe un link

@@ -176,26 +176,60 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: var(--space-2);
+  padding: var(--space-3);
   color: var(--cocoa);
+  min-height: 44px;
+  min-width: 44px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 52;  /* deasupra meniului ca să rămână clickable */
 }
+.site-nav__toggle[aria-expanded="true"] .icon-menu { display: none; }
+.site-nav__toggle[aria-expanded="false"] .icon-close { display: none; }
+.site-nav__toggle:not([aria-expanded="true"]) .icon-close { display: none; }
 
 @media (max-width: 920px) {
   .site-nav__toggle { display: inline-flex; }
 
+  /* Pe mobil header devine opaque (fără blur transparent care lasă să se vadă ce e dedesubt) */
+  .site-header {
+    background: var(--cream);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    z-index: 51;  /* deasupra meniului */
+  }
+
   .site-nav {
     position: fixed;
-    inset: 64px 0 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;             /* fallback */
+    height: 100dvh;            /* dynamic viewport — include iOS address bar */
     background: var(--cream);
     flex-direction: column;
     align-items: stretch;
-    padding: var(--space-6) var(--space-5);
+    padding: 72px var(--space-5) var(--space-7);  /* top = înălțimea header-ului */
     transform: translateX(100%);
     transition: transform var(--transition);
     overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    z-index: 50;
   }
 
   .site-nav[data-open="true"] { transform: translateX(0); }
+
+  /* Skip-link ascuns când meniul mobil e deschis (e cocoa negru și ar apărea peste meniu) */
+  body.nav-open .skip-link {
+    display: none;
+  }
+  body.nav-open {
+    overflow: hidden;
+  }
 
   .site-nav__list {
     flex-direction: column;
