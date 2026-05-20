@@ -79,7 +79,7 @@
 
 .site-header__logo img,
 .site-header__logo svg {
-  height: 44px;
+  height: 64px;
   width: auto;
 }
 
@@ -897,7 +897,7 @@
   }
   .site-header__logo img,
   .site-header__logo svg {
-    height: 36px;
+    height: 48px;
   }
   .site-header__inner {
     padding: var(--space-3) 0;
@@ -940,6 +940,135 @@
     max-width: 100% !important;
     margin: 0 auto;
   }
+}
+
+/* ───── Galerie testimoniale (masonry + lightbox) ───── */
+
+.testimoniale-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-bottom: var(--space-7);
+}
+
+.testimoniale-filters .tag {
+  cursor: pointer;
+  font-family: var(--font-body);
+  padding: var(--space-2) var(--space-4);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-strong);
+}
+.testimoniale-filters .tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.testimoniale-filters .tag--terracotta {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--cream);
+}
+
+.testimoniale-grid {
+  column-count: 3;
+  column-gap: var(--space-5);
+}
+@media (max-width: 900px) {
+  .testimoniale-grid { column-count: 2; }
+}
+@media (max-width: 600px) {
+  .testimoniale-grid { column-count: 1; }
+}
+
+.testimoniale-card {
+  break-inside: avoid;
+  margin: 0 0 var(--space-5);
+  background: var(--cream);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: zoom-in;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: inline-block;
+  width: 100%;
+}
+.testimoniale-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.testimoniale-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.testimoniale-card__cat {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-alt);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(61, 46, 42, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+  cursor: zoom-out;
+}
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox__img {
+  max-width: min(90vw, 800px);
+  max-height: 85vh;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  object-fit: contain;
+  background: var(--cream);
+}
+.lightbox__caption {
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: var(--space-4);
+  text-align: center;
+  opacity: 0.85;
+}
+.lightbox__close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--cocoa);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-family: var(--font-body);
+  z-index: 1;
 }
 
 /* ───── Tap targets pe touch devices ───── */

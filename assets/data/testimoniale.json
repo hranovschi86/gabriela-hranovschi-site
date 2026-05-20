@@ -1,0 +1,310 @@
+[
+  {
+    "slug": "montessori",
+    "label": "Montessori acasă",
+    "items": [
+      {
+        "file": "montessori-1.jpg",
+        "src": "Montessori Acasa EMAIL.png"
+      },
+      {
+        "file": "montessori-2.jpg",
+        "src": "Montessori acasa1.png"
+      },
+      {
+        "file": "montessori-3.jpg",
+        "src": "Montessori acasa2.png"
+      },
+      {
+        "file": "montessori-4.jpg",
+        "src": "Montessori acasa3.png"
+      },
+      {
+        "file": "montessori-5.jpg",
+        "src": "Montessori acasa4.png"
+      }
+    ]
+  },
+  {
+    "slug": "lectii",
+    "label": "14 lecții",
+    "items": [
+      {
+        "file": "lectii-1.jpg",
+        "src": "14Lectii1.png"
+      },
+      {
+        "file": "lectii-2.jpg",
+        "src": "14Lectii2.png"
+      },
+      {
+        "file": "lectii-3.jpg",
+        "src": "14Lectii3.png"
+      },
+      {
+        "file": "lectii-4.jpg",
+        "src": "14Lectii4.png"
+      },
+      {
+        "file": "lectii-5.jpg",
+        "src": "14Lectii5.png"
+      }
+    ]
+  },
+  {
+    "slug": "limite",
+    "label": "Limite cu blândețe",
+    "items": [
+      {
+        "file": "limite-1.jpg",
+        "src": "Limite1.png"
+      },
+      {
+        "file": "limite-2.jpg",
+        "src": "Limite10.png"
+      },
+      {
+        "file": "limite-3.jpg",
+        "src": "Limite11.png"
+      },
+      {
+        "file": "limite-4.jpg",
+        "src": "Limite12.png"
+      },
+      {
+        "file": "limite-5.jpg",
+        "src": "Limite13.png"
+      }
+    ]
+  },
+  {
+    "slug": "scutece",
+    "label": "Renunțarea la scutece",
+    "items": [
+      {
+        "file": "scutece-1.jpg",
+        "src": "SCUTECE0.JPG"
+      },
+      {
+        "file": "scutece-2.jpg",
+        "src": "SCUTECE00.PNG"
+      },
+      {
+        "file": "scutece-3.jpg",
+        "src": "SCUTECE1.JPG"
+      },
+      {
+        "file": "scutece-4.jpg",
+        "src": "SCUTECE10.jpg"
+      },
+      {
+        "file": "scutece-5.jpg",
+        "src": "SCUTECE11.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "adaptare",
+    "label": "Adaptarea copilului",
+    "items": [
+      {
+        "file": "adaptare-1.jpg",
+        "src": "Adaptare1.png"
+      },
+      {
+        "file": "adaptare-2.jpg",
+        "src": "Adaptare10.png"
+      },
+      {
+        "file": "adaptare-3.jpg",
+        "src": "Adaptare11.png"
+      },
+      {
+        "file": "adaptare-4.jpg",
+        "src": "Adaptare12.png"
+      },
+      {
+        "file": "adaptare-5.jpg",
+        "src": "Adaptare13.png"
+      }
+    ]
+  },
+  {
+    "slug": "limbaj",
+    "label": "Dezvoltarea limbajului",
+    "items": [
+      {
+        "file": "limbaj-1.jpg",
+        "src": "Limbaj1.png"
+      },
+      {
+        "file": "limbaj-2.jpg",
+        "src": "Limbaj10.png"
+      },
+      {
+        "file": "limbaj-3.jpg",
+        "src": "Limbaj11.png"
+      },
+      {
+        "file": "limbaj-4.jpg",
+        "src": "Limbaj2.png"
+      },
+      {
+        "file": "limbaj-5.jpg",
+        "src": "Limbaj3.png"
+      }
+    ]
+  },
+  {
+    "slug": "activitati",
+    "label": "Activități dezvoltare",
+    "items": [
+      {
+        "file": "activitati-1.jpg",
+        "src": "Activitati1.png"
+      },
+      {
+        "file": "activitati-2.jpg",
+        "src": "Activitati10.png"
+      },
+      {
+        "file": "activitati-3.jpg",
+        "src": "Activitati11.png"
+      },
+      {
+        "file": "activitati-4.jpg",
+        "src": "Activitati12.png"
+      },
+      {
+        "file": "activitati-5.jpg",
+        "src": "Activitati13.png"
+      }
+    ]
+  },
+  {
+    "slug": "frati",
+    "label": "Frați și surori",
+    "items": [
+      {
+        "file": "frati-1.jpg",
+        "src": "Frati1.png"
+      },
+      {
+        "file": "frati-2.jpg",
+        "src": "Frati2.png"
+      },
+      {
+        "file": "frati-3.jpg",
+        "src": "Frati3.png"
+      },
+      {
+        "file": "frati-4.jpg",
+        "src": "Frati4.png"
+      },
+      {
+        "file": "frati-5.jpg",
+        "src": "Frati5.png"
+      }
+    ]
+  },
+  {
+    "slug": "gradinita",
+    "label": "Separarea la grădiniță",
+    "items": [
+      {
+        "file": "gradinita-1.jpg",
+        "src": "Separare1.png"
+      },
+      {
+        "file": "gradinita-2.jpg",
+        "src": "Separare2.png"
+      },
+      {
+        "file": "gradinita-3.jpg",
+        "src": "Separare3.png"
+      },
+      {
+        "file": "gradinita-4.jpg",
+        "src": "Separare4.png"
+      }
+    ]
+  },
+  {
+    "slug": "mediu",
+    "label": "Pregătirea mediului",
+    "items": [
+      {
+        "file": "mediu-1.jpg",
+        "src": "Mediu1.png"
+      },
+      {
+        "file": "mediu-2.jpg",
+        "src": "Mediu2.png"
+      },
+      {
+        "file": "mediu-3.jpg",
+        "src": "Mediu3.png"
+      },
+      {
+        "file": "mediu-4.jpg",
+        "src": "Mediu4.png"
+      },
+      {
+        "file": "mediu-5.jpg",
+        "src": "Mediu5.png"
+      }
+    ]
+  },
+  {
+    "slug": "emotii",
+    "label": "Emoții",
+    "items": [
+      {
+        "file": "emotii-1.jpg",
+        "src": "IMG_1297.png"
+      },
+      {
+        "file": "emotii-2.jpg",
+        "src": "IMG_4300.png"
+      },
+      {
+        "file": "emotii-3.jpg",
+        "src": "IMG_4744.png"
+      },
+      {
+        "file": "emotii-4.jpg",
+        "src": "IMG_4955.png"
+      },
+      {
+        "file": "emotii-5.jpg",
+        "src": "IMG_7681.png"
+      }
+    ]
+  },
+  {
+    "slug": "cursuri",
+    "label": "Despre cursuri",
+    "items": [
+      {
+        "file": "cursuri-1.jpg",
+        "src": "CURSURILE1.png"
+      },
+      {
+        "file": "cursuri-2.jpg",
+        "src": "CURSURILE10.png"
+      },
+      {
+        "file": "cursuri-3.jpg",
+        "src": "CURSURILE11.png"
+      },
+      {
+        "file": "cursuri-4.jpg",
+        "src": "CURSURILE12.png"
+      },
+      {
+        "file": "cursuri-5.jpg",
+        "src": "CURSURILE13.png"
+      }
+    ]
+  }
+]

@@ -48,6 +48,7 @@ function initHeaderBehavior() {
     '/index.html': 'home',
     '/despre.html': 'despre',
     '/comunitate.html': 'comunitate',
+    '/testimoniale.html': 'testimoniale',
     '/media.html': 'media',
     '/contact.html': 'contact',
     '/faq.html': 'faq',
