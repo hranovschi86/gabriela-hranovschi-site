@@ -66,11 +66,51 @@ function initHeaderBehavior() {
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.getElementById('primary-nav');
   if (toggle && nav) {
+    const closeNav = () => {
+      nav.setAttribute('data-open', 'false');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Deschide meniul');
+      document.body.style.overflow = '';
+    };
+
     toggle.addEventListener('click', () => {
       const open = nav.getAttribute('data-open') === 'true';
       nav.setAttribute('data-open', String(!open));
       toggle.setAttribute('aria-expanded', String(!open));
       toggle.setAttribute('aria-label', open ? 'Deschide meniul' : 'Închide meniul');
+      document.body.style.overflow = open ? '' : 'hidden';
+    });
+
+    // Închide meniul când se face click pe un link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 920px)').matches) closeNav();
+      });
+    });
+
+    // Esc închide meniul mobil
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && nav.getAttribute('data-open') === 'true') closeNav();
+    });
+  }
+
+  // Dropdown "Cursuri": click pe mobil (touch), hover pe desktop
+  const dropdownToggle = document.querySelector('.site-nav__dropdown-toggle');
+  const dropdown = document.querySelector('.site-nav__dropdown');
+  if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener('click', e => {
+      if (window.matchMedia('(max-width: 920px)').matches) return;  // desktop = hover handles it
+      e.preventDefault();
+      const expanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+      dropdownToggle.setAttribute('aria-expanded', String(!expanded));
+      dropdown.classList.toggle('is-open', !expanded);
+    });
+
+    document.addEventListener('click', e => {
+      if (!dropdown.contains(e.target)) {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdown.classList.remove('is-open');
+      }
     });
   }
 }
