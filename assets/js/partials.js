@@ -1,8 +1,18 @@
 /**
- * Injectează header și footer din /partials/ în orice pagină.
- * Folosește atributele data-include="header" și data-include="footer".
- * Funcționează atât local (cu server) cât și pe GitHub Pages.
+ * Injectează header și footer din partials/.
+ * Funcționează atât local (localhost) cât și pe GitHub Pages (subpath /repo/).
+ * Folosește <base href> deja setat în <head> de scriptul inline din fiecare pagină.
  */
+
+// Calculează BASE-ul curent (cu trailing slash)
+const SITE_BASE = (function () {
+  const host = window.location.hostname;
+  if (host.endsWith('github.io')) {
+    const seg = window.location.pathname.split('/').filter(Boolean)[0];
+    return seg ? '/' + seg + '/' : '/';
+  }
+  return '/';
+})();
 
 (async function () {
   const inject = async (selector, url) => {
@@ -18,19 +28,21 @@
     }
   };
 
+  // fetch se rezolvă față de <base href>, deci căile fără slash inițial merg pe ambele medii
   await Promise.all([
-    inject('[data-include="header"]', '/partials/header.html'),
-    inject('[data-include="footer"]', '/partials/footer.html'),
+    inject('[data-include="header"]', 'partials/header.html'),
+    inject('[data-include="footer"]', 'partials/footer.html'),
   ]);
 
-  // După injecție, atașăm comportamentul activ pentru meniu și an curent
   initHeaderBehavior();
   initFooterBehavior();
 })();
 
 function initHeaderBehavior() {
-  // Marchează linkul activ pe baza pathname-ului
-  const path = window.location.pathname;
+  // Strip BASE din path pentru lookup (pe GH Pages path = /gabriela-hranovschi-site/despre.html)
+  let path = window.location.pathname;
+  if (path.startsWith(SITE_BASE)) path = '/' + path.slice(SITE_BASE.length);
+
   const navMap = {
     '/': 'home',
     '/index.html': 'home',
