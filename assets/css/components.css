@@ -372,6 +372,132 @@
   margin: 0;
 }
 
+/* ───── Social icons în footer (Urmărește-mă) ───── */
+
+.site-footer__social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.site-footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: rgba(244, 235, 221, 0.85);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition-fast);
+  padding: 4px 0;
+}
+.site-footer__social-link svg {
+  flex-shrink: 0;
+  color: var(--rose);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+.site-footer__social-link:hover {
+  color: var(--cream);
+  border-bottom-color: transparent;
+}
+.site-footer__social-link:hover svg {
+  color: var(--cream);
+  transform: scale(1.1);
+}
+
+/* Footer mobil: brand centrat, ascund Explorează+Resurse, icons centrate, bottom centrat */
+@media (max-width: 640px) {
+  .site-footer__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-6);
+  }
+
+  .site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .site-footer__tagline {
+    max-width: none;
+  }
+
+  /* Ascund coloanele text pe mobil */
+  .site-footer__col--explore,
+  .site-footer__col--resources {
+    display: none;
+  }
+
+  /* Coloana Social: heading ascuns, icoanele aliniate orizontal pe rând */
+  .site-footer__col--social .site-footer__heading {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .site-footer__col--social {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .site-footer__social-list {
+    flex-direction: row;
+    gap: var(--space-5);
+    justify-content: center;
+  }
+  .site-footer__social-link {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(244, 235, 221, 0.06);
+    border: 1px solid rgba(244, 235, 221, 0.16);
+    justify-content: center;
+    padding: 0;
+    color: var(--rose);
+    transition: all var(--transition-fast);
+  }
+  .site-footer__social-link:hover {
+    background: var(--rose);
+    border-color: var(--rose);
+    color: var(--cocoa);
+  }
+  .site-footer__social-link:hover svg {
+    color: var(--cocoa);
+  }
+  .site-footer__social-label {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Bottom: centrat */
+  .site-footer__bottom {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: var(--space-3);
+  }
+  .site-footer__bottom-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+}
+
 /* ───── Card ───── */
 
 .card {
