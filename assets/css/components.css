@@ -897,7 +897,7 @@
   }
   .site-header__logo img,
   .site-header__logo svg {
-    height: 48px;
+    height: 56px;
   }
   .site-header__inner {
     padding: var(--space-3) 0;
