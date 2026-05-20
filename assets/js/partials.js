@@ -94,20 +94,20 @@ function initHeaderBehavior() {
     });
   }
 
-  // Dropdown "Cursuri": click pe mobil (touch), hover pe desktop
+  // Dropdown "Cursuri": click toggle pe ambele (mobile + desktop)
   const dropdownToggle = document.querySelector('.site-nav__dropdown-toggle');
   const dropdown = document.querySelector('.site-nav__dropdown');
   if (dropdownToggle && dropdown) {
     dropdownToggle.addEventListener('click', e => {
-      if (window.matchMedia('(max-width: 920px)').matches) return;  // desktop = hover handles it
       e.preventDefault();
+      e.stopPropagation();
       const expanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
       dropdownToggle.setAttribute('aria-expanded', String(!expanded));
       dropdown.classList.toggle('is-open', !expanded);
     });
 
     document.addEventListener('click', e => {
-      if (!dropdown.contains(e.target)) {
+      if (!dropdown.contains(e.target) && dropdown.classList.contains('is-open')) {
         dropdownToggle.setAttribute('aria-expanded', 'false');
         dropdown.classList.remove('is-open');
       }
