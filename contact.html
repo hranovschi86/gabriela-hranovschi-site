@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>(function(){var h=location.hostname,b='/';if(h.endsWith('github.io')){var s=location.pathname.split('/').filter(Boolean)[0];if(s)b='/'+s+'/';}document.write('<base href="'+b+'">');})();</script>
+  <title>Contact — Gabriela Hranovschi</title>
+  <meta name="description" content="Scrie-mi pentru întrebări despre cursuri, comunitate, sesiuni 1:1 sau colaborări media. Răspund personal în maxim 48h." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/gh-favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Sari la conținut</a>
+  <div data-include="header"></div>
+
+  <main id="main">
+
+    <section class="section section--loose">
+      <div class="container container--wide">
+        <div class="grid grid--2" style="gap: var(--space-8); align-items: start;">
+
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h1>Scrie-mi.<br /><em style="font-style: italic; color: var(--accent);">Te ascult.</em></h1>
+            <p class="lead">Pentru întrebări despre cursuri, comunitate, sesiuni individuale sau colaborări. Răspund personal — fie eu, fie echipa mea — în maxim 48h.</p>
+
+            <div class="stack--lg" style="margin-top: var(--space-7);">
+              <div>
+                <h4 style="margin-bottom: var(--space-2);">Email</h4>
+                <p style="margin: 0;"><a href="mailto:hranovschi86@gmail.com">hranovschi86@gmail.com</a></p>
+              </div>
+              <div>
+                <h4 style="margin-bottom: var(--space-2);">Social</h4>
+                <p style="margin: 0;">
+                  <a href="https://www.instagram.com/gabriela.hranovschi/" target="_blank" rel="noopener">Instagram</a> ·
+                  <a href="https://www.facebook.com/gabriela.hranovschi" target="_blank" rel="noopener">Facebook</a> ·
+                  <a href="https://www.youtube.com/@gabrielahranovschi" target="_blank" rel="noopener">YouTube</a>
+                </p>
+              </div>
+              <div>
+                <h4 style="margin-bottom: var(--space-2);">Pentru presă</h4>
+                <p class="text-muted" style="margin: 0;">Sunt disponibilă pentru interviuri și comentarii experte. Pentru detalii →<br /><a href="media.html">vezi aparițiile mele</a>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <form class="stack" onsubmit="event.preventDefault(); document.getElementById('contact-thanks').hidden = false; this.hidden = true;" style="background: var(--cream); padding: var(--space-6); border: 1px solid var(--border); border-radius: var(--radius);">
+              <h3 style="margin: 0 0 var(--space-4);">Formular contact</h3>
+
+              <div class="form-field">
+                <label class="form-label" for="cname">Numele tău</label>
+                <input id="cname" name="name" type="text" class="form-input" required />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="cemail">Email</label>
+                <input id="cemail" name="email" type="email" class="form-input" required />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="csubject">Subiect</label>
+                <select id="csubject" name="subject" class="form-select" required>
+                  <option value="">Alege un subiect</option>
+                  <option>Întrebare despre un curs</option>
+                  <option>Comunitatea #suntaici</option>
+                  <option>Sesiune individuală</option>
+                  <option>Colaborare media / press</option>
+                  <option>Eveniment / workshop</option>
+                  <option>Altceva</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="cmessage">Mesaj</label>
+                <textarea id="cmessage" name="message" class="form-textarea" required></textarea>
+                <span class="form-hint">Spune-mi cât mai concret despre ce e vorba — răspund mai bine așa.</span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full">Trimite mesajul</button>
+            </form>
+
+            <div id="contact-thanks" hidden style="background: var(--sage); color: var(--cream); padding: var(--space-6); border-radius: var(--radius); text-align: center;">
+              <h3 style="color: var(--cream); margin-bottom: var(--space-3);">Mulțumesc.</h3>
+              <p style="margin: 0; color: rgba(244, 235, 221, 0.95);">Mesajul tău a ajuns. Îți răspund în maxim 48h. <span class="suntaici" style="color: var(--rose);">#suntaici</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/js/partials.js"></script>
+  <script src="assets/js/ui.js"></script>
+</body>
+</html>
