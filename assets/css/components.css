@@ -683,6 +683,33 @@
   color: var(--text-muted);
 }
 
+/* ───── Ornament divider (arc-cuib + dot din logo) ───── */
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-7) 0;
+  color: var(--accent);
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+}
+
+.ornament svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
 /* ───── Suntaici signature ───── */
 
 .suntaici {
@@ -741,7 +768,7 @@
 .media-marquee__track {
   display: flex;
   align-items: center;
-  gap: var(--space-9);
+  gap: 0;
   width: max-content;
   animation: marquee 40s linear infinite;
 }
@@ -766,6 +793,7 @@
 }
 
 .media-marquee__logo {
+  position: relative;
   font-family: var(--font-display);
   font-size: clamp(1.25rem, 2vw + 0.5rem, 1.75rem);
   font-weight: 500;
@@ -775,6 +803,19 @@
   white-space: nowrap;
   transition: opacity var(--transition-fast), color var(--transition-fast);
   flex-shrink: 0;
+  padding: 0 calc(var(--space-9) / 2);
+}
+.media-marquee__logo::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.4;
 }
 .media-marquee__logo:hover {
   opacity: 1;
@@ -838,7 +879,7 @@
     border-radius: var(--radius);
   }
   .hero__ctas .btn {
-    width: 100%;  /* butoane full-width pe mobil */
+    width: 100%;
   }
   .hero__ctas {
     flex-direction: column;
@@ -865,6 +906,39 @@
   .section--cocoa .form-row {
     grid-template-columns: 1fr;
     gap: var(--space-2);
+  }
+  /* Eyebrow letter-spacing redus pe mobil */
+  .eyebrow {
+    letter-spacing: 0.22em;
+  }
+  /* Hero title mai compact pe mobil */
+  .hero__title {
+    margin-bottom: var(--space-4);
+  }
+  /* Ornament mai mic pe mobil */
+  .ornament {
+    padding: var(--space-5) 0;
+  }
+  .ornament::before,
+  .ornament::after {
+    max-width: 50px;
+  }
+  /* Newsletter form pe Home (secțiunea cocoa) */
+  .section--cocoa .form-row {
+    max-width: 100% !important;
+  }
+}
+
+/* Despre Gabriela pe Home — portret mai prominent pe mobil */
+@media (max-width: 900px) {
+  .home-despre__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6) !important;
+  }
+  .home-despre__portrait {
+    aspect-ratio: 4 / 5 !important;
+    max-width: 100% !important;
+    margin: 0 auto;
   }
 }
 
